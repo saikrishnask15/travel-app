@@ -1,0 +1,113 @@
+.nav-bar {
+  height: 55px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 3vw;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px 0 rgba(85, 84, 84, 0.25);
+  z-index: 999;
+  width: 95%;
+  /* important */
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  position: fixed;
+}
+.nav-logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #222;
+  cursor: pointer;
+}
+.nav-links a,
+.nav-links button {
+  margin-left: 1em;
+  font-size: 1.2em;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  color: rgb(46, 46, 46);
+  transition: 0.2s ease-in-out;
+}
+.nav-links a:hover {
+  background-color: burlywood;
+}
+.signup-btn {
+  background-color: #eae8e8;
+  border: none;
+  cursor: pointer;
+}
+.signup-btn:hover {
+  background-color: #151516;
+  color: #fff;
+}
+.sidebar-icon {
+  display: none;
+}
+.sidebar-icon svg {
+  font-size: 1.5em;
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    z-index: 99;
+  }
+  .sidebar-icon {
+    display: block;
+  }
+}
+.side-bar-ctn {
+  background-color: #fff;
+  box-shadow: rgba(95, 94, 94, 0.16) 0px 3px 6px,
+    rgba(122, 120, 120, 0.23) 0px 3px 6px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  padding: 80px 0 30px 0;
+  z-index: -1;
+  border-radius: 15px;
+}
+.side-bar-links {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.side-bar-links a,
+.side-bar-links button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-bar-links a {
+  width: 80%;
+  border-radius: 5px;
+  font-size: 1.2em;
+  padding: 0.8em 0;
+  color: rgb(46, 46, 46);
+}
+.side-bar-btn {
+  padding: 12px;
+  /* margin: auto; */
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: #6d6c6c;
+  color: #fff;
+}
+.side-bar-btn:hover {
+  background-color: #151516;
+}
+.side-bar-links a:hover {
+  background-color: burlywood;
+}
+.side-bar-links svg {
+  padding-right: 5px;
+}
