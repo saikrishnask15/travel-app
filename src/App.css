@@ -1,7 +1,5 @@
 .container {
-  padding-inline: 8vw;
-  /* position: relative;
-    z-index: -2; */
+  padding-inline: 6vw;
 }
 .main {
   padding-block: 3vw;
@@ -9,6 +7,19 @@
 .section {
   margin-bottom: 40px;
 }
+p{
+  line-height: 1.5;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding-inline: 4vw;
+  }
+}
 @import "./styles/NavBar.css";
 @import "./styles/Hero.css";
 @import "./styles/Destination.css";
+@import './styles/RecentTrips.css';
+@import './styles/About.css';
+@import './styles/Contact.css';
+@import "./styles/Footer.css";
+

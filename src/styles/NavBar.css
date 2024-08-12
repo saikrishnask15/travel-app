@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding-inline: 3vw;
-  border-radius: 15px;
+  border-radius: 12px;
   box-shadow: 0px 5px 15px 0 rgba(85, 84, 84, 0.25);
   z-index: 999;
   width: 95%;
@@ -14,6 +14,9 @@
   left: 50%;
   transform: translate(-50%);
   position: fixed;
+  /* backdrop-filter: blur(30px);
+  background: rgba(40, 57, 57, 0.1);
+  color: #eae8e8; */
 }
 .nav-logo {
   font-size: 2em;
@@ -26,7 +29,7 @@
   margin-left: 1em;
   font-size: 1.2em;
   padding: 0.4em 0.8em;
-  border-radius: 5px;
+  border-radius: 15px;
   color: rgb(46, 46, 46);
   transition: 0.2s ease-in-out;
 }
@@ -110,4 +113,8 @@
 }
 .side-bar-links svg {
   padding-right: 5px;
+}
+.active {
+  color: burlywood;
+  font-weight: bold;
 }

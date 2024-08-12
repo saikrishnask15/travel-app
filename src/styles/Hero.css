@@ -37,12 +37,17 @@ img{
 }
 .hero-text .show{
    background-color: #fff;
-   padding: 1em 1.4em;
+   padding: .8em 1.2em;
    border-radius: 6px;
    font-size: 1.2em;
    font-weight: bold;
    color: black;
    letter-spacing: 1px;
+}
+
+.hero-text .show:hover{
+    background-color: #000;
+    color: #fff;
 }
 @media screen  and (max-width:555px){
     .hero-text h1{

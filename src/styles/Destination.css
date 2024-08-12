@@ -1,8 +1,9 @@
 .destination-title {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  text-align: center;
   margin-bottom: 35px;
   padding: 10px 0;
 }
@@ -78,9 +79,6 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .container {
-    padding-inline: 3vw;
-  }
   .destination-images-ctn img {
     height: 250px;
   }

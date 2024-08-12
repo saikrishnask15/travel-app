@@ -1,7 +1,7 @@
 import Hero from "../Hero";
-
 import journey from "../../assests/journey.jpg";
 import Destination from "../Destination";
+import RecentTrips from "../RecentTrips";
 const Home = () => {
   return (
     <>
@@ -10,11 +10,12 @@ const Home = () => {
         heroImg={journey}
         title="Your journey You Story"
         text="Choose Your favourite Destination."
-        url="/"
+        url="/Contact"
         btnClass="show"
         btnText="Travel plan"
       />
       <Destination />
+      <RecentTrips/>
     </>
   );
 };
