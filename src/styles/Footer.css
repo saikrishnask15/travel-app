@@ -35,7 +35,7 @@
 .f-b-content p,
 .f-b-content a {
   font-size: 1em;
-  line-height: 1.5;
+ margin-bottom: 2px;
   color: #949292;
 }
 
