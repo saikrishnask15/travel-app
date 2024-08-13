@@ -3,6 +3,11 @@ import {
   faInstagramSquare,
   faSquareXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faAt,
+  faLocationArrow,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
@@ -20,45 +25,47 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom ">
-        <FooterBottom
-          heading="Project"
-          item1="Changelog"
-          item2="Status"
-          item3="License"
-          item4="Versions"
-        />
-        <FooterBottom
-          heading="Community"
-          item1="GitHub"
-          item2="Issues"
-          item3="Project"
-          item4="Twitter"
-        />
-        <FooterBottom
-          heading="Help"
-          item1="Support"
-          item2="Troubleshooting"
-          item3="Contact Us"
-        />
-        <FooterBottom
-          heading="Others"
-          item1="Terms of Service"
-          item2="Privacy policy"
-          item3="License"
-        />
-        
+        <div className="f-b-content">
+          <h4>Links</h4>
+          <a href="/">Home</a>
+          <br />
+          <a href="/About">About</a>
+          <br />
+          <a href="/Service">Service</a>
+        </div>
+        <div className="f-b-content">
+          <h4>Contact Us</h4>
+          <p>
+            <FontAwesomeIcon icon={faLocationArrow} /> 123 Street, New Delhi,
+            India
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faAt} /> trips@gmail.com
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faPhone} /> +91 06758 89657
+          </p>
+          <p></p>
+        </div>
+        <div className="f-b-content">
+          <h4>Community</h4>
+          <a href="/">Facebook</a>
+          <br />
+          <a href="/">MeetUp</a>
+          <br />
+          <a href="/">Instagram</a>
+          <br />
+          <a href="/">Twitter</a>
+        </div>
+        <div className="f-b-content">
+          <h4>Others</h4>
+          <a href="/">Terms of Service</a>
+          <br />
+          <a href="/">Privacy policy</a>
+          <br />
+          <a href="/">License</a>
+        </div>
       </div>
-    </div>
-  );
-};
-const FooterBottom = (props) => {
-  return (
-    <div className="f-b-content">
-      <h4>{props.heading}</h4>
-      <p>{props.item1}</p>
-      <p>{props.item2}</p>
-      <p>{props.item3}</p>
-      <p>{props.item4}</p>
     </div>
   );
 };

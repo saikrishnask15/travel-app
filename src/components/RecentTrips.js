@@ -6,7 +6,7 @@ const RecentTrips = () => {
     <div className="section container">
       <div className="Trips">
         <h2>Recent Trips</h2>
-        <p>You can discover unique destinations using Google Maps.</p>
+        <p>Travel, and the world will reveal its secrets.</p>
       </div>
       <div className="recent-trips-places">
         <div className="recent-trips-card">

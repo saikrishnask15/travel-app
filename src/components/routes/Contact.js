@@ -7,15 +7,29 @@ const Contact = () => {
     email: "",
     subject: "",
     message: "",
+    access_key:"b0e86aef-4d4b-45f3-9837-4160b11bc583",
   });
   const [successMessage, setSuccessMessage] = useState("");
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted!"); // Add this line
+  
+    const json = JSON.stringify(formData);
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
     setSuccessMessage("message has been sent!")
     console.log(formData);
   };

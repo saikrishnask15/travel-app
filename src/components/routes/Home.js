@@ -8,7 +8,7 @@ const Home = () => {
       <Hero
         cName="hero section"
         heroImg={journey}
-        title="Your journey You Story"
+        title="Travel Far, Travel Wide"
         text="Choose Your favourite Destination."
         url="/Contact"
         btnClass="show"
