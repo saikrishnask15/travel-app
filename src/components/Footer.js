@@ -1,6 +1,7 @@
 import {
   faFacebookSquare,
   faInstagramSquare,
+  faPinterestSquare,
   faSquareXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -22,6 +23,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faInstagramSquare} />
           <FontAwesomeIcon icon={faFacebookSquare} />
           <FontAwesomeIcon icon={faSquareXTwitter} />
+          <FontAwesomeIcon icon={faPinterestSquare} />
         </div>
       </div>
       <div className="footer-bottom ">
@@ -33,21 +35,23 @@ const Footer = () => {
           <br />
           <a href="/Service">Service</a>
         </div>
+
         <div className="f-b-content">
           <h4>Contact Us</h4>
-          <p>
+          <a href="/">
             <FontAwesomeIcon icon={faLocationArrow} /> 123 Street, New Delhi,
             India
-          </p>
-          <p>
+          </a>
+          <br />
+          <a href="/">
             <FontAwesomeIcon icon={faAt} /> trips@gmail.com
-          </p>
-          <p>
+          </a>
+          <br />
+          <a href="/">
             <FontAwesomeIcon icon={faPhone} /> +91 06758 89657
-          </p>
-          <p></p>
+          </a>
         </div>
-        <div className="f-b-content">
+        {/* <div className="f-b-content">
           <h4>Community</h4>
           <a href="/">Facebook</a>
           <br />
@@ -56,7 +60,8 @@ const Footer = () => {
           <a href="/">Instagram</a>
           <br />
           <a href="/">Twitter</a>
-        </div>
+        </div> */}
+
         <div className="f-b-content">
           <h4>Others</h4>
           <a href="/">Terms of Service</a>
