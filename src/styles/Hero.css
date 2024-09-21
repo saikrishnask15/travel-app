@@ -61,5 +61,8 @@ img{
         padding: .6em 1.1em;
         
      }
+     .hero-text h1 {
+        font-size: 2em;
+     }
     
 }

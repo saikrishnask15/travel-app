@@ -12,3 +12,11 @@
     padding-left: 20px; /* adjust the value to match your bullet size */
     text-indent: -20px; /* adjust the value to match your bullet size */
   }
+  @media screen and (max-width: 600px) {
+    .about-container h1{
+        font-size: 24px;
+    }
+    .about-container p, .about-container li{
+        font-size: 14px;
+    }
+  }

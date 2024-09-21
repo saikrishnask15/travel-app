@@ -53,5 +53,9 @@ input:focus, textarea:focus {
     }
     form{
         width: 90%;
+        row-gap: 1em;
+    }
+    #form input, #form button{
+        font-size: 0.85em;
     }
 }

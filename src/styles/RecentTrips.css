@@ -1,4 +1,3 @@
-
 .Trips {
   /* display: flex;
   flex-direction: column;
@@ -42,13 +41,27 @@
   border-radius: 5px;
 }
 
-.recent-trips-card:hover img{
+.recent-trips-card:hover img {
   transform: scale(1.2);
 }
-.recent-trips-info h4{
+.recent-trips-info h4 {
   padding: 5px 0;
 }
-.recent-trips-info p{
+.recent-trips-info p {
   line-height: 1.4;
 }
 
+@media screen and (max-width: 600px) {
+  .recent-trips-info h4{
+    font-size: 14px;
+  }
+  .recent-trips-info p{
+    font-size: 13px;
+  }
+  .Trips h2 {
+    font-size: 1.5em;
+  }
+  .Trips p {
+    font-size: 0.8em;
+  }
+}

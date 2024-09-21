@@ -1,6 +1,7 @@
 import Hero from "../Hero";
 import contact from "../../assests/contact2.jpg";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { context } from "../ContextProvider";
 const Contact = () => {
   const [formData, setFormData] = useState({
     userName: "",
@@ -10,13 +11,17 @@ const Contact = () => {
     access_key:"b0e86aef-4d4b-45f3-9837-4160b11bc583",
   });
   const [successMessage, setSuccessMessage] = useState("");
+  const {user} = useContext(context);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    if(!user){
+      window.location.href='/Login';
+      return;
+    }
     const json = JSON.stringify(formData);
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",

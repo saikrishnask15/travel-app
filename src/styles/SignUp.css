@@ -1,0 +1,24 @@
+.signup, .Login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 600px) {
+    .signup p, .Login p{
+        font-size: 14px;
+    }
+    .signup h1, .Login h1{
+        font-size: 24px;
+    }
+    .Login form, .signup form{
+        row-gap: 1em;
+    }
+    .Login form input, .signup form input{
+        font-size: 0.85em;
+    }
+    .Login  button, .signup  button{
+        font-size: 0.85em;
+    }
+}
+

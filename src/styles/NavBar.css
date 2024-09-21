@@ -118,3 +118,8 @@
   color: burlywood;
   font-weight: bold;
 }
+@media screen and (max-width: 600px) {
+  .side-bar-links a, .side-bar-btn{
+    font-size: 1em;
+  }
+}

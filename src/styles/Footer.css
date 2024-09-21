@@ -52,3 +52,20 @@
     grid-template-columns: 1fr;
   }
 }
+@media screen and (max-width: 600px) {
+  .footer-top-title h1{
+    font-size: 24px;
+  }
+  .footer-media svg {
+    font-size: 16px;
+  }
+  .footer-top-title p{
+    font-size: 14px;
+  }
+  .f-b-content a {
+    font-size: 0.8em;
+  }
+  .f-b-content h4 {
+    font-size: 0.8em;
+  }
+}
