@@ -54,9 +54,14 @@ const Contact = () => {
 
     if (res.success) {
       console.log("Success", res);
+      setFormData({
+        userName: "",
+        email: "",
+        subject: "",
+        message: "",
+      })
     }
     setSuccessMessage("message has been sent!");
-    console.log(formData);
   };
   return (
     <>

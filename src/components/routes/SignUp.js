@@ -55,7 +55,7 @@ const SignUp = () => {
         email: "",
         password: "",
       });
-      navigate('/Login');
+      navigate('/');
     } catch (error) {
       console.log(error);
       toast.error("Error creating account. Please try again.");
