@@ -22,6 +22,7 @@ const ContextProvider = ({ children }) => {
   const logOut = async () => {
     try {
       await signOut(auth);
+      window.location.href='/Login';
       toast.success("Logout Sucessfull");
     } catch (error) {
       toast.error("Logout Error");

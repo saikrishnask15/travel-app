@@ -2,24 +2,44 @@ import Hero from "../Hero";
 import contact from "../../assests/contact2.jpg";
 import { useContext, useState } from "react";
 import { context } from "../ContextProvider";
+import { toast } from "react-toastify";
 const Contact = () => {
   const [formData, setFormData] = useState({
     userName: "",
     email: "",
     subject: "",
     message: "",
-    access_key:"b0e86aef-4d4b-45f3-9837-4160b11bc583",
+    access_key: "b0e86aef-4d4b-45f3-9837-4160b11bc583",
   });
   const [successMessage, setSuccessMessage] = useState("");
-  const {user} = useContext(context);
+  const { user } = useContext(context);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!user){
-      window.location.href='/Login';
+    if (!user) {
+      window.location.href = "/Login";
+      return;
+    }
+    if (
+      !formData.userName ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
+      toast.error("Please fill out all fields.");
+      return;
+    }
+    if (!validateEmail(formData.email)) {
+      toast.error("Invalid email address");
       return;
     }
     const json = JSON.stringify(formData);
@@ -27,15 +47,15 @@ const Contact = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
       console.log("Success", res);
     }
-    setSuccessMessage("message has been sent!")
+    setSuccessMessage("message has been sent!");
     console.log(formData);
   };
   return (
